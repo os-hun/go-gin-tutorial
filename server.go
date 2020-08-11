@@ -1,14 +1,23 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"go-gin-tutorial/database"
+)
 
 func main() {
 	r := gin.Default()
+	r.LoadHTMLGlob("templates/*.html")
+	
+	database.DbInit()
+
+	data := "Hello Go/Gin!!"
 	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
+		c.HTML(200, "index.html", gin.H{
+			"data": data,
 		})
 	})
+
 	// listen and serve on :8080
 	r.Run()
 }
