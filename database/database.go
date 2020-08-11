@@ -8,9 +8,9 @@ import (
 
 func DbInit() {
 	// open db
-	db, err := gorm.Open("sqlite3", "test.splite3")
+	db, err := gorm.Open("sqlite3", "database/test.splite3")
 	if err != nil {
-		panic("can't open the database")
+		panic("データベースへの接続に失敗しました")
 	}
 	
 	// auto migration
