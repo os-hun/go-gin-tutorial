@@ -1,8 +1,7 @@
 # Go Gin tutorial with Docker
 goとginのチュートリアル
 
-## build
-Dockerで管理しており、下記コマンドでinstall, build, start全てできる。
+## install, build, run
 ```
 $ docker-compose up --build
 ```
