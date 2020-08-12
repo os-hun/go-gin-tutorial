@@ -11,10 +11,11 @@ func main() {
 	
 	database.DbInit()
 
-	data := "Hello Go/Gin!!"
-	r.GET("/ping", func(c *gin.Context) {
+	// Index
+	r.GET("/", func(c *gin.Context) {
+		
 		c.HTML(200, "index.html", gin.H{
-			"data": data,
+			"todos": todos,
 		})
 	})
 
