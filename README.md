@@ -1,5 +1,5 @@
 # Go Gin tutorial with Docker
-goとginのチュートリアル
+goとginのチュートリアル (Todoアプリ)
 
 ## install, build, run
 ```
