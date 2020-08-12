@@ -12,10 +12,10 @@ func DbInit() {
 	if err != nil {
 		panic("データベースへの接続に失敗しました")
 	}
-	
+
 	// auto migration
 	db.AutoMigrate(&model.Todo{})
-	
+
 	// close db
 	defer db.Close()
 }
