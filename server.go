@@ -9,7 +9,7 @@ import (
 func main() {
 	r := gin.Default()
 	r.LoadHTMLGlob("templates/*.html")
-	
+
 	database.DbInit()
 
 	// Index
